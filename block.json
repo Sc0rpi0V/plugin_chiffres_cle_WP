@@ -1,0 +1,86 @@
+{
+	"apiVersion": 2,
+	"name": "create-block/gutenberg-chiffre-cle-trad",
+	"category": "gutenberg",
+	"icon": "admin-network",
+	"attributes": {
+		"title": {
+			"type": "string",
+			"selector": ".key-numbers-title"
+		},
+		"category": {
+		  "type": "string",
+		  "selector": ".key-numbers-title-category",
+		  "default": ""
+		},
+		"subtitle": {
+		  "type": "string",
+		  "selector": ".key-numbers-subtitle"
+		},		
+		"keyNumbersLeft": {
+		  "type": "array",
+		  "default": [],
+		  "selector": ".key-numbers-wrap-left",
+		  "items": {
+			"type": "object",
+			"properties": {
+			  "id": {
+				"type": "number",
+				"selector": "data-id"
+			  },
+			  "number": {
+				"type": "string",
+				"selector": ".key-number-number-left"
+			  },
+			  "text": {
+				"type": "string",
+				"selector": ".key-number-text-left"
+			  },
+				"image": {
+				"type": "object",
+				"selector": ".image-left",
+				"default": {
+					"url": ""
+					}
+				}
+			}
+		  }
+		},
+		"keyNumbers": {
+		  "type": "array",
+		  "default": [],
+		  "selector": ".key-numbers-wrap",
+		  "items": {
+			"type": "object",
+			"properties": {
+			  "id": {
+				"type": "number",
+				"selector": "data-id"
+			  },
+			  "number": {
+				"type": "string",
+				"selector": ".key-number-number"
+			  },
+			  "text": {
+				"type": "string",
+				"selector": ".key-number-text"
+			  },
+				"image": {
+				"type": "object",
+				"selector": ".image",
+				"default": {
+					"url": ""
+				}
+			}
+			}
+		  }
+		}
+	},
+	"supports": {
+		"html": false
+	},
+	"textdomain": "gutenberg-chiffre-cle-trad",
+	"editorScript": "file:./build/index.js",
+	"editorStyle": "file:./build/index.css",
+	"style": "file:./build/style-index.css"
+}
